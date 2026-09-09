@@ -1,0 +1,384 @@
+/**
+ * Responsive — all mobile / tablet / desktop sizes
+ * Overrides legacy style.css breakpoints for .v4-page
+ */
+
+/* ── Global safety ── */
+html.v4-root,
+html:has(body.v4-page) {
+    overflow-x: clip;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body.v4-page {
+    overflow-x: clip;
+    min-width: 280px;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+    padding-top: env(safe-area-inset-top, 0px);
+}
+
+body.v4-page .container {
+    width: 100%;
+    max-width: 100%;
+}
+
+body.v4-page img,
+body.v4-page video {
+    max-width: 100%;
+    height: auto;
+}
+
+body.v4-page .lp-video-wrap video,
+body.v4-page .sg-video-card video {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+}
+
+body.v4-page .main-image-container img {
+    height: 100% !important;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Kill legacy style.css mobile overrides */
+@media (max-width: 768px) {
+    body.v4-page {
+        padding: env(safe-area-inset-top, 0) 0 calc(80px + env(safe-area-inset-bottom, 0)) !important;
+        font-size: inherit !important;
+        line-height: inherit !important;
+    }
+
+    body.v4-page .container {
+        padding-inline: 16px !important;
+    }
+
+    body.v4-page .product-info {
+        padding: 16px 0 0 !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    body.v4-page .product-title {
+        font-size: clamp(1.35rem, 5.2vw, 1.75rem) !important;
+    }
+
+    body.v4-page .current-price {
+        font-size: clamp(2rem, 9vw, 2.75rem) !important;
+    }
+
+    body.v4-page .join-group-btn {
+        width: 100% !important;
+        display: flex !important;
+        white-space: normal !important;
+        margin: 0 !important;
+    }
+
+    body.v4-page .logo-btn {
+        background: transparent !important;
+        color: var(--lp-ink, #0c0c0d) !important;
+        box-shadow: none !important;
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        display: inline-block !important;
+        max-width: 100% !important;
+        padding: 0.4rem 0.5rem !important;
+        font-size: clamp(0.68rem, 3.2vw, 0.8125rem) !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    body.v4-page .countdown-section,
+    body.v4-page .countdown-value {
+        /* undo style.css shrink */
+        padding: inherit;
+    }
+}
+
+/* ── Header grid all widths ── */
+body.v4-page .product-header .row {
+    --bs-gutter-x: 8px;
+    margin: 0;
+}
+
+body.v4-page .product-header [class*="col-"] {
+    padding-inline: 4px;
+}
+
+body.v4-page .product-header .col-6,
+body.v4-page .product-header .col-8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+body.v4-page .product-header .col-3.text-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0;
+}
+
+@media (max-width: 360px) {
+    body.v4-page .header-whatsapp-btn {
+        padding: 0.5rem 0.65rem;
+        font-size: 0.75rem;
+        gap: 0.35rem;
+    }
+
+    body.v4-page .header-whatsapp-btn i {
+        font-size: 1.15rem;
+    }
+}
+
+/* ── Thumbnails scroll ── */
+body.v4-page .thumbnails-container {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    overscroll-behavior-x: contain;
+}
+
+body.v4-page .thumbnail {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+/* ── WhatsApp float vs sticky CTA ── */
+body.v4-page .whatsapp-float {
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+    right: max(12px, env(safe-area-inset-right, 0px));
+    z-index: 150;
+}
+
+body.v4-page .sticky-cta {
+    z-index: 200;
+    padding-left: max(12px, env(safe-area-inset-left, 0));
+    padding-right: max(12px, env(safe-area-inset-right, 0));
+}
+
+/* ── ≤ 320px — iPhone SE, small Android ── */
+@media (max-width: 320px) {
+    body.v4-page main .container,
+    body.v4-page .product-header .container {
+        padding-inline: 12px !important;
+    }
+
+    body.v4-page .lp-feature {
+        padding: 10px 8px;
+        font-size: 0.72rem;
+        gap: 8px;
+    }
+
+    body.v4-page .lp-feature-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.75rem;
+    }
+
+    body.v4-page .price-card {
+        padding: 14px !important;
+    }
+
+    body.v4-page .discount-badge {
+        font-size: 0.72rem !important;
+        padding: 6px 10px !important;
+    }
+
+    body.v4-page .stat-box .num {
+        font-size: 1rem !important;
+    }
+
+    body.v4-page .countdown-value {
+        font-size: 1.15rem !important;
+        padding: 8px 2px !important;
+    }
+
+    body.v4-page .countdown-timer {
+        gap: 4px !important;
+    }
+
+    body.v4-page .thumbnail {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    body.v4-page .sticky-cta .join-group-btn {
+        font-size: 0.78rem !important;
+        padding: 10px 10px !important;
+    }
+
+    body.v4-page .whatsapp-float a span {
+        display: none;
+    }
+
+    body.v4-page .whatsapp-float a {
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        border-radius: 50%;
+    }
+}
+
+/* ── 321–360px — Galaxy S8, many Android ── */
+@media (min-width: 321px) and (max-width: 360px) {
+    body.v4-page .lp-scarcity-head {
+        flex-wrap: wrap;
+    }
+
+    body.v4-page .lp-scarcity-big {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        padding-top: 8px;
+        border-top: 1px solid var(--lp-line, #ececef);
+    }
+
+    body.v4-page .lp-scarcity-big .num {
+        font-size: 1.75rem;
+    }
+}
+
+/* ── 361–414px — iPhone 12–14, large phones ── */
+@media (min-width: 361px) and (max-width: 414px) {
+    body.v4-page main .container {
+        padding-inline: 18px !important;
+    }
+}
+
+/* ── 415–767px — phablets, small tablets portrait ── */
+@media (min-width: 415px) and (max-width: 767px) {
+    body.v4-page main .container,
+    body.v4-page .product-header .container,
+    body.v4-page .sticky-cta-inner {
+        max-width: 480px !important;
+        margin-inline: auto;
+    }
+
+    body.v4-page .main-image-container {
+        aspect-ratio: 4 / 3 !important;
+    }
+}
+
+/* ── ≥ 768px — tablet / desktop ── */
+@media (min-width: 768px) {
+    body.v4-page {
+        padding-bottom: 24px !important;
+    }
+
+    body.v4-page .sticky-cta {
+        display: none !important;
+    }
+
+    body.v4-page .whatsapp-float {
+        bottom: 24px;
+        right: 24px;
+    }
+
+    body.v4-page main .container,
+    body.v4-page .product-header .container {
+        max-width: 520px !important;
+        margin-inline: auto;
+    }
+
+    body.v4-page .video-gallery-container .container {
+        max-width: 520px !important;
+    }
+}
+
+/* ── ≥ 1024px — desktop wide ── */
+@media (min-width: 1024px) {
+    body.v4-page main .container,
+    body.v4-page .product-header .container,
+    body.v4-page .sticky-cta-inner {
+        max-width: 560px !important;
+    }
+}
+
+/* ── Landscape phones ── */
+@media (max-height: 500px) and (orientation: landscape) {
+    body.v4-page .main-image-container {
+        aspect-ratio: 16 / 10 !important;
+        max-height: 45vh !important;
+    }
+
+    body.v4-page .lp-video-wrap {
+        aspect-ratio: 16 / 9;
+        max-height: 40vh;
+    }
+
+    body.v4-page .sticky-cta {
+        padding-top: 6px;
+        padding-bottom: calc(6px + env(safe-area-inset-bottom, 0));
+    }
+
+    body.v4-page .sticky-cta .join-group-btn {
+        min-height: 42px !important;
+    }
+}
+
+/* ── Touch targets ── */
+@media (pointer: coarse) {
+    body.v4-page .back-button,
+    body.v4-page .share-button,
+    body.v4-page .thumbnail {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    body.v4-page .join-group-btn {
+        min-height: 48px;
+    }
+}
+
+/* ── Bottom sections mobile ── */
+@media (max-width: 767px) {
+    body.v4-page .bottom-cta {
+        margin: 1.5rem 0 2rem;
+        padding: 1.25rem 1rem;
+        border-radius: var(--lp-radius-lg, 20px);
+    }
+
+    body.v4-page .bottom-cta h4 {
+        font-size: 1.05rem;
+    }
+
+    body.v4-page .social-buttons {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    body.v4-page .referral-program {
+        padding: 14px;
+    }
+
+    body.v4-page .coupon-code {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    body.v4-page .copy-btn {
+        width: 100%;
+    }
+
+    body.v4-page .product-footer {
+        padding-bottom: calc(16px + env(safe-area-inset-bottom, 0));
+    }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+    body.v4-page * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}

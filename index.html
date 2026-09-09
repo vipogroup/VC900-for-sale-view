@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>כורסת עיסוי VC900 | VIPO</title>
+    <meta name="description" content="כורסת עיסוי VC900 עם מנגנון 4D PRO, מסילת SL, 12 תוכניות, מסך LCD, טעינה אלחוטית וזיהוי מבנה גוף.">
+    <meta property="og:title" content="כורסת עיסוי VC900">
+    <meta property="og:description" content="כורסת עיסוי עם מנגנון 4D Precision Control PRO, מסילת SL, 12 תוכניות אוטומטיות ומסך LCD.">
+    <meta property="og:image" content="assets/images/chair-brown-hero.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/hero-lab.css">
+    <link rel="stylesheet" href="assets/css/hero-lab-site.css">
+    <link rel="stylesheet" href="assets/css/order-form.css">
+    <link rel="stylesheet" href="assets/css/share-sheet.css">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+</head>
+<body>
+
+    <header class="vp-header">
+        <div class="vp-side start">
+            <a href="https://wa.me/972533752633" target="_blank" rel="noopener" class="vp-icon-btn" aria-label="וואטסאפ"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="vp-center">
+            <a href="https://vipo-group.com" target="_blank" rel="noopener" class="vp-logo logo-btn" aria-label="VIPO Group">
+                <span class="vp-logo-word">VIPO</span>
+                <span class="vp-logo-rule" aria-hidden="true"></span>
+                <span class="vp-logo-tag">MASSAGE</span>
+            </a>
+        </div>
+        <div class="vp-side end">
+            <button type="button" class="vp-icon-btn share-button" id="vpShare" aria-label="שתף"><i class="fas fa-share-alt"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="vp-orb vp-orb--1"></div>
+        <div class="vp-orb vp-orb--2"></div>
+        <div class="vp-orb vp-orb--3"></div>
+
+        <section class="vp-hero">
+            <div class="vp-stage" id="vpStage">
+                <div class="vp-stage-media" aria-live="polite">
+                    <img src="assets/images/chair-brown-hero.jpg" alt="כורסת עיסוי VC900 חום" class="vp-slide is-active" id="vpImg">
+                    <img src="" alt="" class="vp-slide" aria-hidden="true">
+                </div>
+                <div class="vp-stage-bar">
+                    <div class="vp-dots" id="vpDots"></div>
+                    <span class="vp-swipe-hint">החליקו לזוויות</span>
+                    <div class="vp-swatches" id="vpSwatches"></div>
+                </div>
+            </div>
+            <div class="vp-copy">
+                <div class="vp-title-row">
+                    <h1 class="vp-title product-title">כורסת עיסוי<span>VC900</span></h1>
+                    <span class="vp-tag">רכישה משותפת</span>
+                </div>
+                <div class="vp-pricing">
+                    <span class="vp-price-now current-price">₪8,900</span>
+                    <span class="vp-price-was original-price">₪12,000</span>
+                    <span class="vp-badge-save">26% הנחה</span>
+                </div>
+                <div class="vp-why">
+                    <p class="vp-why-title">למה זה לא מחיר חנות?</p>
+                    <p>בחנויות בארץ הכורסה נמכרת ב־<strong class="original-price">₪12,000</strong>. כאן קונים ביחד מכולה אחת מהמפעל — בלי חנות, בלי מחסן ובלי מתווך. חוסכים יחד בעלויות, ולכן המחיר <strong class="current-price">₪8,900</strong>.</p>
+                </div>
+                <p class="vp-price-note" hidden>מחיר לאחר הגעת המכולה: <strong>₪8,900</strong></p>
+                <ol class="vp-steps">
+                    <li><span>1</span><strong>נרשמים</strong><small>מצטרפים לקבוצה</small></li>
+                    <li><span>2</span><strong>המכולה נסגרת</strong><small>קונים יחד מהמפעל</small></li>
+                    <li><span>3</span><strong>מגיע הביתה</strong><small>הכורסה אצלכם</small></li>
+                </ol>
+                <button type="button" class="vp-cta join-group-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="btn-text">הזמינו עכשיו</span>
+                </button>
+                <p class="vp-pay">Bit · PayBox · העברה בנקאית · מזומן במסירה</p>
+            </div>
+        </section>
+
+        <div class="s6-lb" id="s6Lb">
+            <button type="button" class="s6-lb-close" id="s6LbClose" aria-label="סגור"><i class="fas fa-xmark"></i></button>
+            <button type="button" class="s6-lb-nav s6-lb-prev" id="s6LbPrev" aria-label="תמונה קודמת"><i class="fas fa-chevron-right"></i></button>
+            <button type="button" class="s6-lb-nav s6-lb-next" id="s6LbNext" aria-label="תמונה הבאה"><i class="fas fa-chevron-left"></i></button>
+            <img id="s6LbImg" src="" alt="">
+            <p class="s6-lb-count" id="s6LbCount"></p>
+        </div>
+
+        <section class="s2">
+            <div class="s2-bg">
+                <div class="vp-deal-stack reveal">
+                    <ul class="vp-trust">
+                        <li><i class="fas fa-shield-alt"></i> אחריות יצרן</li>
+                        <li><i class="fas fa-cogs"></i> 4D PRO</li>
+                        <li><i class="fas fa-ship"></i> משלוח אחרי המכולה</li>
+                    </ul>
+                    <div class="s2-card">
+                    <div class="s2-card-head">
+                        <i class="fas fa-clock"></i>
+                        <span>המבצע נסגר בעוד</span>
+                        <div class="s2-live"><span class="s2-pulse"></span>LIVE</div>
+                    </div>
+                    <div class="s2-timer">
+                        <div class="s2-t"><span id="s2d">30</span><small>ימים</small></div>
+                        <span class="s2-t-sep">:</span>
+                        <div class="s2-t"><span id="s2h">00</span><small>שעות</small></div>
+                        <span class="s2-t-sep">:</span>
+                        <div class="s2-t"><span id="s2m">00</span><small>דקות</small></div>
+                        <span class="s2-t-sep">:</span>
+                        <div class="s2-t"><span id="s2s">00</span><small>שניות</small></div>
+                    </div>
+                    <p class="s2-stock-note">רכישה משותפת · המכולה נסגרת בתאריך היעד</p>
+                    </div>
+                </div>
+                <p class="s2-vid-label" hidden><i class="fas fa-play-circle"></i> סרטון הדגמה</p>
+                <button type="button" class="s2-vid-thumb" id="demoOpen" aria-label="פתח סרטון הדגמה" hidden>
+                    <img src="assets/images/chair-brown-hero.jpg" alt="כורסת עיסוי VC900">
+                    <span class="s2-vid-overlay" aria-hidden="true"><i class="fas fa-play"></i></span>
+                </button>
+                <div class="s2-vid-modal" id="demoModal">
+                    <button type="button" class="s6-lb-close" id="demoClose" aria-label="סגור"><i class="fas fa-xmark"></i></button>
+                    <video id="demoVideo" controls playsinline preload="metadata" src="assets/chair-demo.mp4"></video>
+                </div>
+                <script>
+                (function () {
+                    var btn = document.getElementById('demoOpen');
+                    var modal = document.getElementById('demoModal');
+                    var video = document.getElementById('demoVideo');
+                    var closeBtn = document.getElementById('demoClose');
+                    if (!btn || !modal || !video) return;
+                    function show() {
+                        modal.classList.add('is-open');
+                        video.play().catch(function () {});
+                    }
+                    function hide() {
+                        video.pause();
+                        modal.classList.remove('is-open');
+                    }
+                    btn.addEventListener('click', show);
+                    if (closeBtn) closeBtn.addEventListener('click', hide);
+                    modal.addEventListener('click', function (e) {
+                        if (e.target === modal) hide();
+                    });
+                })();
+                </script>
+            </div>
+        </section>
+
+        <section class="s3">
+            <div class="sec-card reveal">
+                <div class="vp-eyebrow"><span class="vp-eyebrow-num">01</span><span class="vp-eyebrow-line"></span><span class="vp-eyebrow-txt">למה VIPO</span></div>
+                <h2 class="sec-card-title">חוויית עיסוי מקצועית — ממש בבית</h2>
+                <p class="s3-lead">כורסת עיסוי מתקדמת עם מנגנון <strong>4D Precision Control PRO</strong>, מסילת <strong>SL</strong>, זיהוי מבנה גוף, 12 תוכניות אוטומטיות, שליטה במסך LCD, טעינה אלחוטית במשענת היד, עיסוי Airbags לרגליים, לישה לשוקיים וגלילי עיסוי לכפות הרגליים.</p>
+                <div class="s3-grid">
+                    <div class="s3-ben s3-ben--health reveal">
+                        <div class="s3-ben-icon"><i class="fas fa-heart-pulse"></i></div>
+                        <strong>מנגנון 4D PRO</strong>
+                        <p>מנגנון 4D Precision Control PRO ומסילת SL מפלדה — בלי לצאת מהבית</p>
+                    </div>
+                    <div class="s3-ben s3-ben--relax reveal reveal-delay-1">
+                        <div class="s3-ben-icon"><i class="fas fa-spa"></i></div>
+                        <strong>12 תוכניות</strong>
+                        <p>12 תוכניות אוטומטיות, 5 דרגות מהירות ו־5 דרגות עוצמת עיסוי</p>
+                    </div>
+                    <div class="s3-ben s3-ben--shield reveal reveal-delay-2">
+                        <div class="s3-ben-icon"><i class="fas fa-shield-alt"></i></div>
+                        <strong>אחריות מלאה</strong>
+                        <p>אחריות יצרן + שירות טכני בארץ · שנה נוספת 500 שקל</p>
+                    </div>
+                    <div class="s3-ben s3-ben--factory reveal reveal-delay-3">
+                        <div class="s3-ben-icon"><i class="fas fa-industry"></i></div>
+                        <strong>ישירות מהמפעל</strong>
+                        <p>ללא מתווכים ויבואנים — חיסכון של אלפי שקלים על כל כורסה</p>
+                    </div>
+                </div>
+                <details class="s3-specs-card">
+                    <summary class="s3-specs-title"><i class="fas fa-list-check"></i> מפרט טכני</summary>
+                    <table class="s3-specs">
+                        <tbody>
+                            <tr><td>דגם</td><td>VC900</td></tr>
+                            <tr><td>חומר</td><td>PU + ABS + פלדה</td></tr>
+                            <tr><td>מנגנון</td><td>4D Precision Control PRO</td></tr>
+                            <tr><td>מסילה</td><td>SL — מסילת פלדה</td></tr>
+                            <tr><td>תוכניות</td><td>12 תוכניות אוטומטיות</td></tr>
+                            <tr><td>התאמה</td><td>5 דרגות מהירות · 5 דרגות עוצמה · 3 דרגות Airbags</td></tr>
+                            <tr><td>שליטה</td><td>מסך LCD · פאנל במשענת היד · שליטה קולית AI</td></tr>
+                            <tr><td>זמן עבודה</td><td>30 דקות</td></tr>
+                            <tr><td>מידות הכורסה</td><td>148 × 87 × 108 ס״מ</td></tr>
+                            <tr><td>מידות אריזה</td><td>121 × 76 × 110 ס״מ</td></tr>
+                            <tr><td>משקל נטו / ברוטו</td><td>74 / 84 ק״ג</td></tr>
+                            <tr><td>הספק</td><td>150W</td></tr>
+                            <tr><td>מתח / תדר</td><td>110–240V · 50–60Hz</td></tr>
+                            <tr><td>מוזיקה</td><td>כן</td></tr>
+                            <tr><td>צבעים</td><td>חום / לבן</td></tr>
+                        </tbody>
+                    </table>
+                </details>
+
+                <div class="s3-tech reveal">
+                    <h3 class="s3-tech-title"><i class="fas fa-microchip"></i> טכנולוגיית העיסוי</h3>
+                    <p class="s3-tech-lead">לפי מפרט היצרן — בלי תוספות שלא מופיעות בקטלוג</p>
+                    <div class="s3-tech-grid">
+                        <article class="s3-tech-card s3-tech-card--wide reveal">
+                            <div class="s3-tech-media">
+                                <img src="assets/images/features/back-roller.jpg" alt="המחשה — מנגנון 4D PRO ומסילת SL" loading="lazy" width="1000" height="563">
+                            </div>
+                            <div class="s3-tech-body">
+                                <h4>4D PRO + מסילת SL</h4>
+                                <p>מנגנון 4D Precision Control PRO ומסילת SL מפלדה. 12 תוכניות אוטומטיות + זמן עבודה 30 דקות</p>
+                            </div>
+                        </article>
+                        <article class="s3-tech-card reveal reveal-delay-1">
+                            <div class="s3-tech-media">
+                                <img src="assets/images/features/massage-zones.jpg" alt="המחשה — אזורי עיסוי וזיהוי מבנה גוף" loading="lazy" width="1000" height="563">
+                            </div>
+                            <div class="s3-tech-body">
+                                <h4>זיהוי מבנה גוף</h4>
+                                <p>Body Shape Detection + 5 דרגות מהירות ועוצמה</p>
+                            </div>
+                        </article>
+                        <article class="s3-tech-card reveal reveal-delay-2">
+                            <div class="s3-tech-media">
+                                <img src="assets/images/features/foot-cutaway.jpg" alt="המחשה — גלילי כף רגל ולישה לשוקיים" loading="lazy" width="1000" height="563">
+                            </div>
+                            <div class="s3-tech-body">
+                                <h4>רגליים וכפות רגליים</h4>
+                                <p>עיסוי Airbags לרגליים, לישה לשוקיים וגלילי כף רגל</p>
+                            </div>
+                        </article>
+                        <article class="s3-tech-card s3-tech-card--wide reveal reveal-delay-1">
+                            <div class="s3-tech-media">
+                                <img src="assets/images/chair-brown-screen.jpg" alt="מסך LCD מחובר לכורסת VC900" loading="lazy" width="1000" height="563">
+                            </div>
+                            <div class="s3-tech-body">
+                                <h4>מסך LCD + שליטה קולית</h4>
+                                <p>מסך LCD, פאנל שליטה במשענת היד ושליטה קולית AI</p>
+                            </div>
+                        </article>
+                    </div>
+                    <details class="s3-tech-more">
+                        <summary>עוד מהקטלוג</summary>
+                        <div class="s3-tech-grid">
+                            <article class="s3-tech-card">
+                                <div class="s3-tech-media">
+                                    <img src="assets/images/features/wireless-charging.jpg" alt="המחשה — טעינה אלחוטית במשענת היד" loading="lazy" width="1000" height="563">
+                                </div>
+                                <div class="s3-tech-body">
+                                    <h4>טעינה אלחוטית</h4>
+                                    <p>טעינה אלחוטית במשענת היד</p>
+                                </div>
+                            </article>
+                            <article class="s3-tech-card">
+                                <div class="s3-tech-media">
+                                    <img src="assets/images/chair-brown-lifestyle.jpg" alt="כורסת עיסוי VC900 בסלון" loading="lazy" width="1000" height="563">
+                                </div>
+                                <div class="s3-tech-body">
+                                    <h4>מוזיקה + תאורת Breathing</h4>
+                                    <p>מוזיקה מובנית ותאורת Breathing Light לפי דף היצרן</p>
+                                </div>
+                            </article>
+                            <article class="s3-tech-card">
+                                <div class="s3-tech-media">
+                                    <img src="assets/images/features/leg-airbag.jpg" alt="המחשה — עיסוי Airbags לרגליים" loading="lazy" width="1000" height="563">
+                                </div>
+                                <div class="s3-tech-body">
+                                    <h4>Airbags לרגליים</h4>
+                                    <p>עיסוי Airbags לרגליים עם 3 דרגות עוצמה</p>
+                                </div>
+                            </article>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="s4" id="lpReviewsSection" aria-label="ביקורות לקוחות">
+            <div class="s4-fade-top"></div>
+            <div class="s4-glow"></div>
+            <div class="s4-head reveal">
+                <div class="vp-eyebrow"><span class="vp-eyebrow-num">02</span><span class="vp-eyebrow-line"></span><span class="vp-eyebrow-txt">לקוחות מספרים</span></div>
+                <h2 class="s4-title">מה הלקוחות שלנו אומרים</h2>
+                <div class="s4-rating-row">
+                    <div class="s4-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="s4-avg">4.8</span>
+                    <span class="s4-count">· ביקורות מאומתות</span>
+                </div>
+            </div>
+            <div class="s4-list" id="lpReviewsList"></div>
+            <button type="button" class="s4-reviews-toggle" id="lpReviewsToggle" hidden aria-expanded="false">הצג עוד ביקורות</button>
+            <p class="s4-review-cta"><a href="review-request.html"><i class="fas fa-star" aria-hidden="true"></i> רכשת? השאר/י ביקורת</a></p>
+            <div class="s4-fade-bot"></div>
+        </section>
+
+        <section class="s5">
+            <div class="sec-card reveal">
+                <div class="vp-eyebrow"><span class="vp-eyebrow-num">03</span><span class="vp-eyebrow-line"></span><span class="vp-eyebrow-txt">כל מה שחשוב לדעת</span></div>
+                <h2 class="sec-card-title">שאלות נפוצות</h2>
+                <div class="s5-acc">
+                    <details class="s5-item">
+                        <summary>למה זה זול יותר מחנות?</summary>
+                        <p>נרשמים לקבוצה וקונים יחד מכולה אחת מהמפעל. בלי חנות, בלי מחסן ובלי מתווך — לכן המחיר <strong class="current-price">₪8,900</strong> במקום <strong class="original-price">₪12,000</strong> בחנויות. אחרי סגירת הקבוצה המשלוח יוצא אליכם.</p>
+                    </details>
+                    <details class="s5-item">
+                        <summary>מתי אקבל את המוצר?</summary>
+                        <p>לאחר סגירת הקבוצה, זמן האספקה המשוער הוא 21–45 ימי עסקים. תקבלו עדכון כשהמשלוח יצא לדרך.</p>
+                    </details>
+                    <details class="s5-item">
+                        <summary>מה כוללת האחריות?</summary>
+                        <p>אחריות יצרן לשנה. שנה נוספת ב-500 שקל.</p>
+                    </details>
+                    <details class="s5-item">
+                        <summary>האם יש אפשרות החזרה?</summary>
+                        <p>כן — תוך 14 יום מקבלת המשלוח, כל עוד המוצר באריזתו המקורית ולא נעשה בו שימוש.</p>
+                    </details>
+                    <details class="s5-item">
+                        <summary>האם הכורסה נכנסת בדלת?</summary>
+                        <p>מידות האריזה לפי הקטלוג: <strong>121 × 76 × 110 ס״מ</strong>. מומלץ לוודא שהמשלוח נכנס בפתח הבית.</p>
+                    </details>
+                    <details class="s5-item">
+                        <summary>מה כלול במחיר?</summary>
+                        <p>הכורסה במחיר <strong class="current-price">₪8,900</strong>, אחריות יצרן לשנה, ומשלוח עד הבית <strong>₪400 עד 40 ק״מ</strong> מבאר יעקב. מעבר לזה <strong>+₪50 לכל 10 ק״מ</strong>.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="s8">
+            <div class="s8-inner reveal">
+                <div class="s8-icon"><i class="fas fa-ship"></i></div>
+                <h2 class="s8-title">המכולה הקודמת — כבר סופקה</h2>
+                <p class="s8-sub">תמונות וסרטונים מהמכולה שכבר הגיעה (ייצור מ־28.6.2026). אתם נרשמים עכשיו למכולה הבאה — אותו מפעל, אותה שיטה.</p>
+                <div class="s8-thumbs">
+                    <span class="s8-thumbs-tag">מכולה קודמת</span>
+                    <img src="assets/shipment/01-production/2.webp" alt="ייצור במפעל — מכולה קודמת" loading="lazy">
+                    <img src="assets/shipment/02-loading/5.webp" alt="העמסה למכולה — מכולה קודמת" loading="lazy">
+                    <img src="assets/shipment/03-shipped/1.webp" alt="משלוח המכולה הקודמת" loading="lazy">
+                </div>
+                <a href="gallery.html" class="s8-btn">
+                    <i class="fas fa-images"></i>
+                    <span>גלריית תמונות מהמפעל</span>
+                </a>
+                <div class="s8-trust">
+                    <span><i class="fas fa-lock"></i> תשלום מאובטח</span>
+                    <span><i class="fas fa-shield-alt"></i> רוכשים ביחד במחיר מפעל</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="s7">
+            <div class="s7-inner reveal">
+                <h2 class="s7-title">מוכנים לחוויה?</h2>
+                <p class="s7-sub">הזמינו עכשיו והבטיחו מחיר מפעל<br>לפני שהמכולה נגמרת</p>
+                <div class="s7-price-row">
+                    <span class="s7-now current-price">₪8,900</span>
+                    <span class="s7-was original-price">₪12,000</span>
+                </div>
+                <button type="button" class="s7-cta join-group-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="btn-text">הזמינו עכשיו בוואטסאפ</span>
+                </button>
+                <p class="s7-note"><i class="fas fa-lock"></i> Bit · PayBox · העברה · מזומן</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="vp-footer reveal">
+        <div class="vp-ft-top">
+            <div class="vp-ft-brand">
+                <span class="vp-ft-logo">VIPO<span class="vp-ft-dot"></span></span>
+                <p class="vp-ft-tagline">כורסאות עיסוי פרימיום — ישירות מהמפעל אליכם</p>
+            </div>
+            <div class="vp-ft-cols">
+                <div class="vp-ft-col">
+                    <h4 class="vp-ft-col-title"><i class="fas fa-phone-alt"></i> צרו קשר</h4>
+                    <ul class="vp-ft-list">
+                        <li><a href="tel:+972533752633"><i class="fas fa-mobile-alt"></i> 053-375-2633</a></li>
+                        <li><a href="https://wa.me/972533752633" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> וואטסאפ</a></li>
+                    </ul>
+                </div>
+                <div class="vp-ft-col">
+                    <h4 class="vp-ft-col-title"><i class="fas fa-clock"></i> שעות פעילות</h4>
+                    <ul class="vp-ft-list">
+                        <li>א׳–ה׳: 09:00–19:00</li>
+                        <li>ו׳: 09:00–13:00</li>
+                        <li>שבת: סגור</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="vp-ft-bottom">
+            <div class="vp-ft-badges">
+                <span><i class="fas fa-lock"></i> תשלום מאובטח</span>
+                <span><i class="fas fa-shield-alt"></i> אחריות יצרן</span>
+                <span><i class="fas fa-ship"></i> משלוח אחרי המכולה</span>
+            </div>
+            <p class="vp-ft-copy">&copy; 2026 VIPO. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+
+    <div class="vp-sticky">
+        <div class="vp-sticky-inner">
+            <div class="vp-sticky-price">
+                <span class="vp-sticky-now current-price">₪8,900</span>
+                <span class="vp-sticky-was original-price">₪12,000</span>
+            </div>
+            <button type="button" class="vp-sticky-btn join-group-btn">
+                <i class="fab fa-whatsapp"></i>
+                <span class="btn-text">הזמינו עכשיו</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="assets/js/hero-lab.js"></script>
+    <script src="assets/js/share-sheet.js"></script>
+    <script src="assets/js/stock-api.js"></script>
+    <script src="assets/js/stock-live.js"></script>
+    <script src="assets/js/product-loader.js"></script>
+    <script src="assets/js/delivery-geocode.js"></script>
+    <script src="assets/js/order-form.js"></script>
+    <script src="assets/js/reviews.js"></script>
+</body>
+</html>

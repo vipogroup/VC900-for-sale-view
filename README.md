@@ -1,1 +1,0 @@
-VC900 view-only landing page

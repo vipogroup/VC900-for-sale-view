@@ -1,0 +1,240 @@
+/* עיצוב משופר לאזור השיתוף וההפניה */
+.social-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.social-buttons .btn {
+    padding: 12px 15px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border: none;
+    margin: 0;
+}
+
+.social-buttons .btn i {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.social-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+}
+
+.btn-facebook {
+    background-color: #1877F2;
+}
+
+.btn-telegram {
+    background-color: #0088cc;
+}
+
+.btn-email {
+    background-color: #D44638;
+}
+
+.referral-program {
+    background-color: #f8f9fa;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.referral-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.referral-icon {
+    font-size: 36px;
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.referral-title h4 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.sparkle {
+    display: inline-block;
+    animation: sparkle 1.5s infinite;
+}
+
+@keyframes sparkle {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.coupon-code-container {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    margin: 25px 0;
+}
+
+.coupon-code {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.coupon-code input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px dashed #3498db;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    background-color: #f0f8ff;
+}
+
+.copy-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.copy-message {
+    text-align: center;
+    color: #2ecc71;
+    font-weight: 600;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* עיצוב משופר לצעדי ההפניה */
+.referral-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.step-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.step-arrow {
+    color: #3498db;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+/* עיצוב משופר לתיאור ההפניה */
+.referral-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8f4fd;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.referral-badge {
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.badge-text {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.referral-description p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+    .social-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .coupon-code {
+        flex-direction: column;
+    }
+    
+    .copy-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .referral-steps {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .step-arrow {
+        transform: rotate(90deg);
+        margin: 5px 0;
+    }
+}

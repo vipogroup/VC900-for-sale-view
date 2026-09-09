@@ -1,0 +1,813 @@
+/**
+
+ * Hero Fold — כפתור רכישה גלוי במסך הראשון (מובייל)
+
+ * משתמש ב-svh (viewport קטן) כדי להתאים לפתיחת דף עם סרגל כתובות
+
+ */
+
+
+
+:root {
+
+    --lp-header-h: 58px;
+
+    --lp-mobile-cta-h: 68px;
+
+}
+
+
+
+@media (max-width: 767px) {
+
+    body.v4-page main > .container {
+
+        display: flex;
+
+        flex-direction: column;
+
+    }
+
+
+
+    /* ── Above the fold — גלילה טבעית, תמונה גדולה ── */
+    body.v4-page .lp-hero-fold {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+        min-height: 0;
+        padding: 0 0 12px;
+        overflow: visible;
+    }
+
+
+
+    body.v4-page .lp-hero-fold .product-info {
+
+        display: contents;
+
+    }
+
+
+
+    /* Hero image — רוחב מלא, יחס 1:1 */
+    body.v4-page .lp-hero-fold .lp-hero-media {
+        flex: 0 0 auto;
+        width: 100%;
+        min-height: 0;
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 1;
+    }
+
+    body.v4-page .lp-hero-fold .gallery-container {
+        margin: 0 !important;
+        padding: 8px !important;
+        height: auto !important;
+        width: 100%;
+        display: block;
+    }
+
+    body.v4-page .lp-hero-fold .main-image-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: auto !important;
+        max-height: none !important;
+        flex: none;
+        margin-bottom: 0 !important;
+    }
+
+    body.v4-page .lp-hero-fold .main-image-container img {
+        width: 100%;
+        height: 100%;
+        max-height: none !important;
+        object-fit: contain;
+        display: block;
+        margin: 0;
+    }
+
+
+
+    body.v4-page .lp-hero-fold .gallery-badge {
+
+        position: absolute;
+
+        bottom: 8px;
+
+        left: 8px;
+
+        top: auto;
+
+        z-index: 2;
+
+        font-size: 0.65rem;
+
+        padding: 4px 8px;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .thumbnails-container,
+
+    body.v4-page .lp-hero-fold .lp-eyebrow,
+
+    body.v4-page .lp-hero-fold .lp-features,
+
+    body.v4-page .lp-hero-fold .trust-micro,
+
+    body.v4-page .lp-hero-fold .lp-cta-sub {
+
+        display: none !important;
+
+    }
+
+
+
+    /* Text block — קומפקטי */
+
+    body.v4-page .lp-hero-fold .lp-hero-copy {
+
+        flex: 0 0 auto;
+
+        position: relative;
+
+        z-index: 2;
+
+        text-align: center;
+
+        padding: 0 2px;
+
+        margin-top: 0;
+
+        background: var(--lp-white, #fff);
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .product-title {
+
+        font-size: 1.05rem !important;
+
+        line-height: 1.25 !important;
+
+        margin-bottom: 2px !important;
+
+        text-align: center !important;
+
+        font-weight: 800 !important;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .product-subtitle {
+
+        font-size: 0.72rem !important;
+
+        line-height: 1.35 !important;
+
+        margin-bottom: 6px !important;
+
+        text-align: center !important;
+
+        color: var(--lp-ink-secondary, #52525b) !important;
+
+        display: -webkit-box;
+
+        -webkit-line-clamp: 1;
+
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+
+    }
+
+
+
+    /* Compact price row */
+
+    body.v4-page .lp-hero-fold .price-card {
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        gap: 8px !important;
+
+        flex-wrap: wrap !important;
+
+        padding: 0 !important;
+
+        margin: 0 0 4px !important;
+
+        border: none !important;
+
+        box-shadow: none !important;
+
+        background: transparent !important;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .price-row-main {
+
+        flex-direction: row !important;
+
+        align-items: baseline !important;
+
+        justify-content: center !important;
+
+        gap: 8px !important;
+
+        margin: 0 !important;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .lp-price-block {
+
+        display: flex;
+
+        align-items: baseline;
+
+        gap: 8px;
+
+        text-align: center;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .current-price {
+
+        font-size: 1.75rem !important;
+
+        order: 1;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .original-price {
+
+        font-size: 0.9rem !important;
+
+        color: var(--lp-red, #e11d48) !important;
+
+        order: 0;
+
+        margin: 0 !important;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .discount-badge {
+
+        font-size: 0.65rem !important;
+
+        padding: 3px 8px !important;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .lp-price-note {
+
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 0.68rem;
+
+        color: var(--lp-ink-secondary, #52525b);
+
+        margin: 2px 0 0;
+
+        font-weight: 500;
+
+        line-height: 1.3;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .lp-price-note strong {
+
+        color: var(--lp-red, #e11d48);
+
+        font-weight: 800;
+
+    }
+
+
+
+    body.v4-page .lp-warranty-note {
+
+        font-size: 0.78rem;
+
+        color: var(--lp-ink-secondary, #52525b);
+
+        text-align: center;
+
+        margin: 0 0 16px;
+
+        padding: 10px 12px;
+
+        background: var(--lp-surface, #fafafa);
+
+        border: 1px solid var(--lp-line, #ececef);
+
+        border-radius: 12px;
+
+        line-height: 1.5;
+
+    }
+
+
+
+    body.v4-page .lp-warranty-note strong {
+
+        color: var(--lp-blue, #0066ff);
+
+    }
+
+
+
+    /* Mini FOMO strip */
+
+    body.v4-page .lp-hero-fomo {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 6px;
+
+        font-size: 0.68rem;
+
+        font-weight: 600;
+
+        color: var(--lp-ink-secondary, #52525b);
+
+        background: #faf0ea;
+
+        border: 1px solid rgba(193, 122, 82, 0.15);
+
+        border-radius: 999px;
+
+        padding: 4px 10px;
+
+        margin-bottom: 0;
+
+        flex-shrink: 0;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fomo .dot {
+
+        width: 6px;
+
+        height: 6px;
+
+        border-radius: 50%;
+
+        background: #c17a52;
+
+        animation: heroFomoPulse 1.4s infinite;
+
+    }
+
+
+
+    @keyframes heroFomoPulse {
+
+        0%, 100% { opacity: 1; }
+
+        50% { opacity: 0.35; }
+
+    }
+
+
+
+    body.v4-page .lp-hero-fomo strong {
+
+        color: var(--lp-ink, #0c0c0d);
+
+        font-weight: 700;
+
+    }
+
+
+
+    /* מוסתר ב-hero — נראה בגלילה */
+
+    body.v4-page .lp-hero-fold .lp-hero-sales-note {
+
+        display: none;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-hero-sales-note,
+    body.v4-page .lp-below-fold .lp-below-sales-note {
+
+        display: block;
+
+        margin: 0 0 12px;
+
+        font-size: 0.75rem;
+
+        line-height: 1.45;
+
+        text-align: center;
+
+        color: var(--lp-ink-secondary, #52525b);
+
+        font-weight: 500;
+
+    }
+
+
+
+    /* CTA בתוך hero — מוסתר, יש סרגל קבוע למטה */
+
+    body.v4-page .lp-hero-fold .lp-hero-actions {
+
+        display: none !important;
+
+    }
+
+
+
+    /* Below fold — full content */
+
+    body.v4-page .lp-below-fold {
+
+        padding-top: 8px;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-below-video {
+
+        padding: 0 0 12px !important;
+
+        margin: 0 0 8px;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-below-video .lp-video-wrap {
+
+        aspect-ratio: 16/9;
+
+        max-height: 220px;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-hero-only {
+
+        display: none !important;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-fold-only {
+
+        display: block !important;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-gallery-full {
+
+        background: transparent !important;
+
+        border: none !important;
+
+        padding: 0 0 8px !important;
+
+        margin: 0 0 12px !important;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-gallery-full .thumbnails-container {
+
+        display: flex !important;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-below-cta {
+
+        display: none !important;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-cta-sub {
+
+        display: none !important;
+
+    }
+
+    /* כפתור רכישה בתחתית — מוסתר במובייל (יש סרגל צף) */
+    body.v4-page .lp-bottom-purchase-cta {
+
+        display: none !important;
+
+    }
+
+
+
+    /* ── סרגל רכישה קבוע — תמיד גלוי במובייל ── */
+
+    body.v4-page .lp-mobile-cta-bar {
+
+        display: block;
+
+        position: fixed;
+
+        bottom: 0;
+
+        left: 0;
+
+        right: 0;
+
+        z-index: 250;
+
+        padding: 8px 16px calc(8px + env(safe-area-inset-bottom, 0px));
+
+        background: rgba(255, 255, 255, 0.96);
+
+        backdrop-filter: saturate(180%) blur(16px);
+
+        -webkit-backdrop-filter: saturate(180%) blur(16px);
+
+        border-top: 1px solid var(--lp-line, #ececef);
+
+        box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.08);
+
+    }
+
+
+
+    body.v4-page .lp-mobile-cta-bar .join-group-btn {
+
+        width: 100%;
+
+        min-height: 48px !important;
+
+        margin: 0 !important;
+
+        font-size: 0.95rem !important;
+
+        border-radius: 14px !important;
+
+    }
+
+
+
+    body.v4-page {
+
+        padding-bottom: calc(var(--lp-mobile-cta-h) + env(safe-area-inset-bottom, 0px) + 12px) !important;
+
+    }
+
+
+
+    /* מסכים נמוכים מאוד */
+    @media (max-height: 640px) {
+        body.v4-page .lp-hero-fold .product-title {
+            font-size: 0.95rem !important;
+        }
+
+        body.v4-page .lp-hero-fold .current-price {
+            font-size: 1.5rem !important;
+        }
+
+        body.v4-page .lp-hero-fold .lp-hero-fomo {
+            font-size: 0.62rem;
+            padding: 3px 8px;
+        }
+    }
+
+}
+
+
+
+/* Desktop — no fold constraint */
+
+@media (min-width: 768px) {
+
+    body.v4-page .lp-mobile-cta-bar {
+
+        display: none !important;
+
+    }
+
+
+
+    body.v4-page {
+
+        padding-bottom: calc(24px + env(safe-area-inset-bottom)) !important;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-below-cta,
+
+    body.v4-page .lp-below-fold .lp-cta-sub {
+
+        display: flex !important;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-cta-sub {
+
+        display: block !important;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .lp-hero-actions {
+
+        display: none;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold {
+
+        min-height: auto;
+
+        max-height: none;
+
+        height: auto;
+
+        overflow: visible;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .lp-hero-copy {
+
+        text-align: right;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .product-title {
+
+        text-align: right !important;
+
+        font-size: clamp(1.5rem, 5.5vw, 1.875rem) !important;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .product-subtitle {
+
+        text-align: right !important;
+
+        -webkit-line-clamp: unset;
+
+        display: block;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .price-card {
+
+        justify-content: flex-start !important;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fomo {
+
+        display: none;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .lp-hero-sales-note {
+
+        display: block;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-hero-sales-note,
+    body.v4-page .lp-below-fold .lp-below-sales-note {
+
+        display: none;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-fold-only {
+
+        display: none !important;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .thumbnails-container {
+
+        display: flex !important;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-gallery-full {
+
+        display: none;
+
+    }
+
+
+
+    body.v4-page .lp-below-fold .lp-below-video .lp-video-wrap {
+
+        max-height: 280px;
+
+    }
+
+}
+
+
+
+/* Very small screens */
+
+@media (max-width: 320px) {
+
+    body.v4-page .lp-hero-fold .product-title {
+
+        font-size: 0.9rem !important;
+
+    }
+
+
+
+    body.v4-page .lp-hero-fold .current-price {
+
+        font-size: 1.45rem !important;
+
+    }
+
+}
+
+
+
+@media (max-width: 767px) {
+
+    body.v4-page .lp-fold-only {
+
+        display: none;
+
+    }
+
+}
+
+

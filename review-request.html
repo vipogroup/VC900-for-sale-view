@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="v4-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>השאר ביקורת | VIPO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/premium-v4.css">
+    <link rel="stylesheet" href="assets/css/review-page.css">
+</head>
+<body class="v4-page review-page">
+    <header class="product-header">
+        <div class="container">
+            <div class="row py-3 align-items-center">
+                <div class="col-12 text-center">
+                    <a href="index.html" class="review-back-link"><i class="fas fa-arrow-right"></i> חזרה לדף המוצר</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container review-page-main">
+        <div id="reviewRequestFormWrap" class="review-state-card">
+            <h1>השאר/י ביקורת</h1>
+            <p class="review-lead">רכשת כורסת? נשמח לשמוע. הביקורת תיבדק לפני פרסום.</p>
+            <p class="review-note">מוצגות רק ביקורות מאושרות · שם מקוצר בלבד</p>
+
+            <form id="reviewRequestForm" novalidate>
+                <label for="reqName">שם מלא *</label>
+                <input type="text" id="reqName" class="review-input" required autocomplete="name" placeholder="ישראל ישראלי">
+
+                <label for="reqPhone">נייד (כמו בהזמנה) *</label>
+                <input type="tel" id="reqPhone" class="review-input" required autocomplete="tel" inputmode="tel" placeholder="050-0000000">
+
+                <label for="reqColor">צבע כורסה</label>
+                <select id="reqColor" class="review-input">
+                    <option value="">בחר צבע</option>
+                    <option value="חום">חום</option>
+                    <option value="בז'">בז'</option>
+                    <option value="כחול">כחול</option>
+                </select>
+
+                <label>דירוג *</label>
+                <div class="review-stars-input" id="reqStarsInput" role="radiogroup" aria-label="דירוג">
+                    <button type="button" class="review-star-btn is-on" data-star="1" aria-label="1 כוכב"><i class="fas fa-star"></i></button>
+                    <button type="button" class="review-star-btn is-on" data-star="2" aria-label="2 כוכבים"><i class="fas fa-star"></i></button>
+                    <button type="button" class="review-star-btn is-on" data-star="3" aria-label="3 כוכבים"><i class="fas fa-star"></i></button>
+                    <button type="button" class="review-star-btn is-on" data-star="4" aria-label="4 כוכבים"><i class="fas fa-star"></i></button>
+                    <button type="button" class="review-star-btn is-on" data-star="5" aria-label="5 כוכבים"><i class="fas fa-star"></i></button>
+                </div>
+                <input type="hidden" id="reqStars" value="5">
+
+                <label for="reqText">הביקורת שלך *</label>
+                <textarea id="reqText" class="review-input" rows="4" maxlength="500" required placeholder="ספר/י על החוויה (מינימום 10 תווים)"></textarea>
+
+                <button type="submit" class="review-btn review-btn-primary" id="reqSubmitBtn">שליחה לאישור</button>
+                <p class="review-status" id="reqStatus" aria-live="polite"></p>
+            </form>
+        </div>
+
+        <div id="reviewRequestDone" class="review-state-card" hidden>
+            <h1>תודה!</h1>
+            <p>הביקורת התקבלה ו<strong>תיבדק לפני פרסום</strong> באתר.</p>
+            <a href="index.html" class="btn btn-primary review-btn">חזרה לדף המוצר</a>
+        </div>
+    </main>
+
+    <script src="assets/js/stock-api.js"></script>
+    <script src="assets/js/review-request.js"></script>
+</body>
+</html>

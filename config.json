@@ -1,0 +1,70 @@
+{
+  "productName": "כורסת עיסוי VC900",
+  "productDescription": "כורסת עיסוי עם מנגנון 4D Precision Control PRO, מסילת SL, זיהוי מבנה גוף, 12 תוכניות אוטומטיות, מסך LCD, טעינה אלחוטית, עיסוי Airbags לרגליים, לישה לשוקיים וגלילי כף רגל.",
+  "price": 12000,
+  "discountPrice": 8900,
+  "priceAfterArrival": 8900,
+  "currency": "₪",
+  "warrantyYears": 1,
+  "warrantyExtensionPerYear": 500,
+  "endDate": "2026-10-09T23:59:59",
+  "imagesFolder": "product-images",
+  "specFile": "product-spec.html",
+  "participants": 25,
+  "totalUnits": 54,
+  "soldUnits": 28,
+  "stockLive": {
+    "enabled": false
+  },
+  "orderApi": {
+    "enabled": true,
+    "url": "https://script.google.com/macros/s/AKfycbxtWO3xllFPKTNIaB5tcC0iTZ7y0kOH7CT9HcWIxBnSTPZOVdixWfNoofoXtAfWFKZN/exec"
+  },
+  "contactPhone": "0533752633",
+  "delivery": {
+    "origin": {
+      "name": "באר יעקב",
+      "lat": 31.9386,
+      "lon": 34.8374
+    },
+    "basePrice": 400,
+    "includedKm": 40,
+    "extraPer10Km": 50
+  },
+  "shipment": {
+    "currentStage": "shipped"
+  },
+  "demoVideo": {
+    "preview": "",
+    "full": ""
+  },
+  "buyersList": {
+    "enabled": false,
+    "initialVisible": 5,
+    "maxVisible": 25
+  },
+  "reviews": {
+    "enabled": false,
+    "moderation": true,
+    "publicForm": true,
+    "pageUrl": "https://vipogroup.github.io/3Massage-for-sale-VC-view/review.html",
+    "requestUrl": "https://vipogroup.github.io/3Massage-for-sale-VC-view/review-request.html",
+    "items": [
+      {
+        "name": "דוד כ. · בז׳",
+        "text": "הכורסה מרגישה יוקרתית, העיסוי חזק ומדויק. קניתי דרך הקבוצה במחיר מפעל — חוסך אלפי שקלים.",
+        "stars": 5
+      },
+      {
+        "name": "מירי ל. · כחול",
+        "text": "החימום בגב ובמותניים ממש מרגיע אחרי יום עבודה. הגיעה ארוזה מעולה, היה קל להתקין.",
+        "stars": 5
+      },
+      {
+        "name": "אבי ש. · חום",
+        "text": "שירות מהיר בוואטסאפ, הסבר על כל הפיצ'רים. השליטה הקולית נוחה, כל המשפחה משתמשת.",
+        "stars": 5
+      }
+    ]
+  }
+}

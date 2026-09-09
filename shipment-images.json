@@ -1,0 +1,76 @@
+{
+  "stages": [
+    {
+      "id": "production",
+      "folder": "01-production",
+      "label": "ייצור במפעל",
+      "icon": "fa-industry",
+      "images": [
+        "assets/shipment/01-production/2.webp",
+        "assets/shipment/01-production/4.webp",
+        "assets/shipment/01-production/7.webp",
+        "assets/shipment/01-production/9.webp",
+        "assets/shipment/01-production/10.webp",
+        "assets/shipment/01-production/11.webp",
+        "assets/shipment/01-production/12.webp",
+        "assets/shipment/01-production/14.webp",
+        "assets/shipment/01-production/16.webp",
+        "assets/shipment/01-production/17.webp",
+        "assets/shipment/01-production/31.webp",
+        "assets/shipment/01-production/41.webp",
+        "assets/shipment/01-production/42.webp"
+      ],
+      "videos": [
+        "assets/shipment/01-production/videos/1.mp4",
+        "assets/shipment/01-production/videos/2.mp4",
+        "assets/shipment/01-production/videos/3.mp4",
+        "assets/shipment/01-production/videos/d2.mp4"
+      ],
+      "videoPosters": [
+        "assets/shipment/01-production/41.webp",
+        "assets/shipment/01-production/31.webp",
+        "assets/shipment/01-production/17.webp",
+        "assets/shipment/01-production/14.webp"
+      ]
+    },
+    {
+      "id": "loading",
+      "folder": "02-loading",
+      "label": "העמסה למכולה",
+      "icon": "fa-truck-loading",
+      "images": [
+        "assets/shipment/02-loading/5.webp",
+        "assets/shipment/02-loading/6.webp",
+        "assets/shipment/02-loading/7.webp",
+        "assets/shipment/02-loading/8.webp",
+        "assets/shipment/02-loading/9.webp",
+        "assets/shipment/02-loading/10.webp",
+        "assets/shipment/02-loading/11.webp",
+        "assets/shipment/02-loading/12.webp",
+        "assets/shipment/02-loading/13.webp"
+      ],
+      "videos": []
+    },
+    {
+      "id": "shipped",
+      "folder": "03-shipped",
+      "label": "נשלח מהמפעל",
+      "icon": "fa-shipping-fast",
+      "images": [
+        "assets/shipment/03-shipped/1.webp",
+        "assets/shipment/03-shipped/2.webp",
+        "assets/shipment/03-shipped/3.webp",
+        "assets/shipment/03-shipped/4.webp"
+      ],
+      "videos": []
+    },
+    {
+      "id": "israel-port",
+      "folder": "04-israel-port",
+      "label": "הגיע לנמל בישראל",
+      "icon": "fa-anchor",
+      "images": [],
+      "videos": []
+    }
+  ]
+}
