@@ -928,7 +928,7 @@
               <span id="orderTotalPrice" class="order-price-now">₪8,900</span>
             </div>
           </div>
-          <span class="order-price-was original-price">מחיר שוק: ₪12,000</span>
+          <span class="order-price-was original-price">מחיר שוק: ₪18,000</span>
         </div>
         <button type="submit" class="order-btn order-btn-primary" id="orderSubmitBtn">
           <span class="order-btn-text">שלח הזמנה בוואטסאפ</span>
