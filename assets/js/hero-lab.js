@@ -30,9 +30,10 @@
             ]
         }
     ];
-    var ROTATE_MS = 3800;
+    var ROTATE_MS = 3000;
     var FADE_MS = 650;
-    var RESUME_MS = 6000;
+    var RESUME_MS = 0;
+    var REDUCED_MOTION = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var currentSrc = COLORS[0].images[0].src;
     var galleryCtrl = null;
 
@@ -176,11 +177,17 @@
         }
 
         function startAuto() {
+            if (REDUCED_MOTION) return;
             clearInterval(timer);
             timer = setInterval(function () {
                 if (locked || animating) return;
-                var nextColor = (colorIdx + 1) % COLORS.length;
-                show(nextColor, 0);
+                var nextAngle = angleIdx + 1;
+                var nextColor = colorIdx;
+                if (nextAngle >= COLORS[colorIdx].images.length) {
+                    nextAngle = 0;
+                    nextColor = (colorIdx + 1) % COLORS.length;
+                }
+                show(nextColor, nextAngle);
             }, ROTATE_MS);
         }
 
@@ -239,7 +246,11 @@
         }
 
         var stage = document.getElementById('vpStage');
-        if (stage) bindSwipe(stage);
+        if (stage) {
+            bindSwipe(stage);
+            stage.addEventListener('pointerdown', pauseAuto);
+            stage.addEventListener('touchstart', pauseAuto, { passive: true });
+        }
 
         rebuildDots();
         updateIndicators();
