@@ -370,7 +370,7 @@
     }
 
     function buildOrderMessage(data, orderResult) {
-        const product = (appConfig && appConfig.productName) || 'כורסת עיסוי VC900';
+        const product = (appConfig && appConfig.productName) || 'כורסת עיסוי VIPO VC900';
         let msg = '🛒 *הזמנה חדשה מהאתר*\n\n';
         msg += 'מוצר: ' + product + '\n';
         msg += 'מחיר כורסה: ' + formatMoney(data.productPrice) + '\n';
