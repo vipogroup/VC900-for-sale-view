@@ -25,7 +25,8 @@
                 { src: 'assets/images/chair-white-screen.jpg', angle: 'מסך' },
                 { src: 'assets/images/chair-white-3q.jpg', angle: 'זווית' },
                 { src: 'assets/images/chair-white-side.jpg', angle: 'פרופיל' },
-                { src: 'assets/images/chair-white-rear.jpg', angle: 'אחורי' }
+                { src: 'assets/images/chair-white-rear.jpg', angle: 'אחורי' },
+                { src: 'assets/images/features/vc900-panel-dial.jpg', angle: 'שליטה' }
             ]
         }
     ];
