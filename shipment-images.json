@@ -54,7 +54,7 @@
     {
       "id": "shipped",
       "folder": "03-shipped",
-      "label": "נשלח מהמפעל",
+      "label": "נשלח לנמל",
       "icon": "fa-shipping-fast",
       "images": [
         "assets/shipment/03-shipped/1.webp",
@@ -65,10 +65,34 @@
       "videos": []
     },
     {
+      "id": "sea",
+      "folder": "04-sea",
+      "label": "משלוח בים",
+      "icon": "fa-ship",
+      "images": [],
+      "videos": []
+    },
+    {
       "id": "israel-port",
       "folder": "04-israel-port",
-      "label": "הגיע לנמל בישראל",
+      "label": "הגיע לנמל אשדוד",
       "icon": "fa-anchor",
+      "images": [],
+      "videos": []
+    },
+    {
+      "id": "port-release",
+      "folder": "06-port-release",
+      "label": "שחרור מהנמל",
+      "icon": "fa-file-signature",
+      "images": [],
+      "videos": []
+    },
+    {
+      "id": "delivery",
+      "folder": "07-delivery",
+      "label": "בדרך ללקוחות",
+      "icon": "fa-truck",
       "images": [],
       "videos": []
     }
