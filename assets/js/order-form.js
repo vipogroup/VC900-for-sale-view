@@ -91,7 +91,7 @@
             const n = Number(String(el.textContent).replace(/[^\d]/g, ''));
             if (n) return n;
         }
-        return 8900;
+        return 6900;
     }
 
     function formatMoney(amount) {
@@ -917,7 +917,7 @@
           <div class="order-price-breakdown">
             <div class="order-price-line">
               <span>כורסה (מחיר מכולה)</span>
-              <span id="orderProductPrice" class="order-product-price">₪8,900</span>
+              <span id="orderProductPrice" class="order-product-price">₪6,900</span>
             </div>
             <div class="order-price-line" id="orderDeliveryLine" hidden>
               <span id="orderDeliveryLabelText">משלוח</span>
@@ -925,7 +925,7 @@
             </div>
             <div class="order-price-line order-price-line-total">
               <span>סה״כ לתשלום</span>
-              <span id="orderTotalPrice" class="order-price-now">₪8,900</span>
+              <span id="orderTotalPrice" class="order-price-now">₪6,900</span>
             </div>
           </div>
           <span class="order-price-was original-price">מחיר שוק: ₪18,000</span>
