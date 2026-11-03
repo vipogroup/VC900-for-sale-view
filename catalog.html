@@ -262,6 +262,26 @@ border-top:1px solid var(--line);padding-top:2mm}}
   document.querySelectorAll('.js-print').forEach(function(btn){
     btn.addEventListener('click', function(){ window.print(); });
   });
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.photos').forEach(function(track){
+    var timer = null, visible = false;
+    function stop(){ clearInterval(timer); timer = null; track.dataset.stopped = '1'; }
+    function tick(){
+      if (!visible || track.scrollWidth <= track.clientWidth + 4) return;
+      var fig = track.querySelector('figure');
+      var step = fig ? fig.getBoundingClientRect().width + 12 : track.clientWidth;
+      var atEnd = Math.abs(track.scrollLeft) + track.clientWidth >= track.scrollWidth - 4;
+      if (atEnd) track.scrollTo({left: 0, behavior: 'smooth'});
+      else track.scrollBy({left: getComputedStyle(track).direction === 'rtl' ? -step : step, behavior: 'smooth'});
+    }
+    ['pointerdown', 'touchstart', 'wheel'].forEach(function(ev){
+      track.addEventListener(ev, stop, {passive: true});
+    });
+    new IntersectionObserver(function(entries){
+      visible = entries[0].isIntersecting;
+      if (visible && !timer && !track.dataset.stopped) timer = setInterval(tick, 3000);
+    }, {threshold: 0.6}).observe(track);
+  });
 })();
 </script>
 </body>
