@@ -385,6 +385,14 @@ function updateProductDetails(config) {
     }
 
 
+    // מספר מכולה — עולה ב־1 בכל חודש מהחודש שהוגדר
+    if (config.container && config.container.number != null) {
+        const num = containerNumberFor(config.container, new Date());
+        document.querySelectorAll('.container-number').forEach(el => {
+            el.textContent = num;
+        });
+    }
+
     // עדכון מלאי / FOMO
     if (typeof StockApi !== 'undefined') {
         StockApi.init(config, updateStockFomo);
@@ -417,6 +425,14 @@ function updateProductDetails(config) {
             el.innerHTML = el.innerHTML.replace(/[\d\-]+/, '0' + phone);
         });
     }
+}
+
+function containerNumberFor(container, now) {
+    const parts = String(container.month || '').split('-').map(Number);
+    const base = Number(container.number);
+    if (parts.length !== 2 || !parts[0] || !parts[1]) return base;
+    const diff = (now.getFullYear() - parts[0]) * 12 + (now.getMonth() + 1 - parts[1]);
+    return base + Math.max(0, diff);
 }
 
 /**
