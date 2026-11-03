@@ -7,12 +7,13 @@
   "currency": "₪",
   "warrantyYears": 1,
   "warrantyExtensionPerYear": 500,
-  "endDate": "2026-11-30T23:59:59",
+  "endDate": "auto",
   "imagesFolder": "product-images",
   "specFile": "product-spec.html",
   "participants": 25,
-  "totalUnits": 54,
-  "soldUnits": 28,
+  "totalUnits": 60,
+  "soldUnits": 45,
+  "container": { "number": 9, "month": "2026-11" },
   "stockLive": {
     "enabled": false
   },
@@ -32,7 +33,16 @@
     "extraPer10Km": 50
   },
   "shipment": {
-    "currentStage": "shipped"
+    "currentStage": "shipped",
+    "schedule": [
+      { "id": "production", "days": 14 },
+      { "id": "loading", "days": 3 },
+      { "id": "shipped", "days": 1 },
+      { "id": "sea", "days": 25 },
+      { "id": "israel-port", "days": 1 },
+      { "id": "port-release", "days": 4 },
+      { "id": "delivery", "days": 0 }
+    ]
   },
   "demoVideo": {
     "preview": "assets/images/features/vc900-mode-selection.jpg",
