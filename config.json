@@ -35,8 +35,10 @@
     "currentStage": "shipped"
   },
   "demoVideo": {
-    "preview": "",
-    "full": ""
+    "preview": "assets/images/features/vc900-mode-selection.jpg",
+    "full": "assets/chair-demo.mp4",
+    "music": "assets/demo-music.wav",
+    "playbackRate": 2
   },
   "buyersList": {
     "enabled": false,
