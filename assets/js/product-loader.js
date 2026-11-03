@@ -46,7 +46,7 @@ function createExampleConfigFile() {
         price: 1599,
         discountPrice: 1299,
         currency: "₪",
-        endDate: "2026-10-09T23:59:59",
+        endDate: "2026-11-30T23:59:59",
         imagesFolder: "product-images",
         specFile: "product-spec.html",
         participants: 32,
