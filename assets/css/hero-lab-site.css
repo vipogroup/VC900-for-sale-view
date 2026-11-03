@@ -911,3 +911,6 @@ body.share-open .vp-sticky,
 body.admin-open .vp-sticky {
     transform: translateX(-50%) translateY(120%);
 }
+
+.s3-catalog-link { display: block; margin-top: 10px; text-decoration: none; }
+.s3-catalog-link .s3-specs-title::after { content: '\f019'; }
