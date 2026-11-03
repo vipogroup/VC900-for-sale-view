@@ -1,6 +1,19 @@
 (function () {
-    const STAGE_ORDER = ['production', 'loading', 'shipped', 'israel-port'];
+    let STAGE_ORDER = ['production', 'loading', 'shipped', 'israel-port'];
     const PREVIEW_COUNT = 6;
+    let closedLabel = '';
+    let closedNumber = 0;
+
+    // The container that closed last month is one below the one open this month.
+    function closedContainerNumber(container, now) {
+        if (!container || container.number == null) return 0;
+        const parts = String(container.month || '').split('-').map(Number);
+        const base = Number(container.number);
+        const diff = parts.length === 2 && parts[0] && parts[1]
+            ? (now.getFullYear() - parts[0]) * 12 + (now.getMonth() + 1 - parts[1])
+            : 0;
+        return Math.max(1, base + Math.max(0, diff) - 1);
+    }
 
     let stagesData = [];
     let currentStageId = 'shipped';
@@ -74,7 +87,8 @@
             '  <span class="sg-progress-fill" style="width:' + pct + '%"></span>' +
             '</div>' +
             '<p class="sg-progress-text">שלב ' + (idx + 1) + ' מתוך ' + total +
-            (current ? ' · ' + current.label : '') + '</p>';
+            (current ? ' · ' + current.label : '') +
+            (closedLabel ? '<br>' + (closedNumber ? 'מכולה מס׳ ' + closedNumber + ' · ' : '') + 'נסגרה ב־' + closedLabel : '') + '</p>';
 
         if (jumpBtn) {
             jumpBtn.hidden = false;
@@ -487,6 +501,23 @@
         }, { passive: true });
     }
 
+    // Timeline starts on the 1st of the current month, right after last month's container closed.
+    function stageFromSchedule(schedule, now) {
+        if (!Array.isArray(schedule) || !schedule.length) return null;
+        const start = new Date(now.getFullYear(), now.getMonth(), 1);
+        const closed = new Date(start.getTime() - 1);
+        closedLabel = closed.getDate() + '.' + (closed.getMonth() + 1) + '.' + closed.getFullYear();
+        const day = Math.floor((now - start) / 86400000);
+        let acc = 0;
+        for (let i = 0; i < schedule.length; i++) {
+            const days = Number(schedule[i].days) || 0;
+            if (!days) return schedule[i].id;
+            acc += days;
+            if (day < acc) return schedule[i].id;
+        }
+        return schedule[schedule.length - 1].id;
+    }
+
     async function init() {
         try {
             const [manifest, config] = await Promise.all([
@@ -494,7 +525,10 @@
                 fetch('config.json?_=' + Date.now()).then(function (r) { return r.json(); }).catch(function () { return {}; })
             ]);
             stagesData = manifest.stages || [];
-            currentStageId = (config.shipment && config.shipment.currentStage) || 'shipped';
+            STAGE_ORDER = stagesData.map(function (s) { return s.id; });
+            const shipment = config.shipment || {};
+            closedNumber = closedContainerNumber(config.container, new Date());
+            currentStageId = stageFromSchedule(shipment.schedule, new Date()) || shipment.currentStage || 'shipped';
 
             renderHeroProgress(stagesData, currentStageId);
             renderStageNav(stagesData, currentStageId);
