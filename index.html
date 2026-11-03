@@ -112,28 +112,39 @@
                     <p class="s2-stock-note">רכישה משותפת · המכולה נסגרת בתאריך היעד</p>
                     </div>
                 </div>
-                <p class="s2-vid-label" hidden><i class="fas fa-play-circle"></i> סרטון הדגמה</p>
-                <button type="button" class="s2-vid-thumb" id="demoOpen" aria-label="פתח סרטון הדגמה" hidden>
-                    <img src="assets/images/chair-brown-hero.jpg" alt="כורסת עיסוי VC900">
+                <p class="s2-vid-label"><i class="fas fa-play-circle"></i> סרטון הדגמה</p>
+                <button type="button" class="s2-vid-thumb" id="demoOpen" aria-label="פתח סרטון הדגמה">
+                    <img src="assets/images/features/vc900-mode-selection.jpg" alt="סרטון הדגמה — VIPO VC900">
                     <span class="s2-vid-overlay" aria-hidden="true"><i class="fas fa-play"></i></span>
                 </button>
                 <div class="s2-vid-modal" id="demoModal">
                     <button type="button" class="s6-lb-close" id="demoClose" aria-label="סגור"><i class="fas fa-xmark"></i></button>
-                    <video id="demoVideo" controls playsinline preload="metadata" src="assets/chair-demo.mp4"></video>
+                    <video id="demoVideo" controls playsinline preload="metadata" muted src="assets/chair-demo.mp4"></video>
+                    <audio id="demoMusic" preload="auto" src="assets/demo-music.wav" loop></audio>
                 </div>
                 <script>
                 (function () {
                     var btn = document.getElementById('demoOpen');
                     var modal = document.getElementById('demoModal');
                     var video = document.getElementById('demoVideo');
+                    var music = document.getElementById('demoMusic');
                     var closeBtn = document.getElementById('demoClose');
                     if (!btn || !modal || !video) return;
+                    video.defaultPlaybackRate = 2;
                     function show() {
+                        video.muted = true;
+                        video.playbackRate = 2;
                         modal.classList.add('is-open');
                         video.play().catch(function () {});
+                        if (music) {
+                            music.currentTime = 0;
+                            music.volume = 0.85;
+                            music.play().catch(function () {});
+                        }
                     }
                     function hide() {
                         video.pause();
+                        if (music) music.pause();
                         modal.classList.remove('is-open');
                     }
                     btn.addEventListener('click', show);
@@ -141,6 +152,7 @@
                     modal.addEventListener('click', function (e) {
                         if (e.target === modal) hide();
                     });
+                    video.addEventListener('ended', hide);
                 })();
                 </script>
             </div>
