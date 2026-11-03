@@ -1,21 +1,19 @@
 (function () {
     var SCENES = [
-        { src: 'assets/images/chair-cream-hires.png', kicker: 'ישירות מהמפעל', title: 'כורסת עיסוי VC LUXURY', sub: 'חוויית עיסוי מקצועית — בבית' },
-        { src: 'assets/images/chair-cream-front.png', kicker: 'צבע שמנת', title: 'מבט קדמי', sub: 'עיצוב נקי לכל חדר' },
-        { src: 'assets/images/chair-navy-hires.png', kicker: 'צבע נייבי', title: 'נוכחות שקטה', sub: 'שלושה צבעים לבחירה' },
-        { src: 'assets/images/chair-black-hires.png', kicker: 'צבע שחור', title: 'גימור יוקרתי', sub: 'שמנת · נייבי · שחור' },
-        { src: 'assets/images/features/internal-mechanism.png', kicker: 'טכנולוגיה', title: '5 מנועים + מסילת SL', sub: 'טיימר 15–30 דקות · לישה' },
-        { src: 'assets/images/features/heating.png', kicker: 'חימום', title: 'Graphene', sub: 'גב · מותניים · רגליים' },
-        { src: 'assets/images/features/leg-foot-massage.png', kicker: 'רגליים', title: 'גלילי כף רגל', sub: 'Foot Roller Kneading' },
-        { src: 'assets/images/features/airbags.png', kicker: 'עיסוי עוטף', title: 'מערכת כריות אוויר', sub: 'לחיצה רכה לפי היצרן' },
-        { src: 'assets/images/features/lcd-control-panel.png', kicker: 'שליטה', title: 'מסך LCD גדול', sub: 'שליטה קולית · 5 תוכניות' },
-        { src: 'assets/images/features/speaker-detail.png', kicker: 'שמע', title: 'Bluetooth Hi-Fi', sub: 'מערכת שמע מובנית' },
-        { src: 'assets/images/chair-cream-controls.png', kicker: 'נוחות', title: 'השליטה בהישג יד', sub: 'מסך · כפתורים · קול' },
-        { src: 'assets/images/chair-navy-front.png', kicker: 'מפרט', title: '154 × 74 × 112 ס״מ', sub: '150W · 110–240V · 77 / 87 ק״ג' },
-        { src: 'assets/images/chair-black-front.png', kicker: 'חומרים', title: 'עור PU + שלדת פלדה', sub: 'אריזה 150 × 76 × 110 ס״מ' },
-        { src: 'assets/images/chair-navy-controls.png', kicker: 'צבעי קטלוג', title: 'חום / בז / כחול', sub: 'בתמונות: שמנת · נייבי · שחור' },
-        { src: 'assets/images/chair-black-controls.png', kicker: 'שחור', title: 'לוח שליטה', sub: 'תפעול פשוט מכל זווית' },
-        { src: 'assets/images/chair-cream-hires.png', kicker: 'מחיר מפעל', title: '₪4,900', sub: 'אחריות יצרן לשנה' }
+        { src: 'assets/images/chair-brown-hero.jpg', kicker: 'ישירות מהמפעל', title: 'כורסת עיסוי VIPO VC900', sub: 'עיסוי 4D עם שליטה מותאמת אישית' },
+        { src: 'assets/images/chair-brown-front.jpg', kicker: 'צבע חום', title: 'מבט קדמי', sub: 'עיצוב נקי לכל חדר' },
+        { src: 'assets/images/chair-white-front.jpg', kicker: 'צבע לבן', title: 'גימור בהיר', sub: 'חום / לבן' },
+        { src: 'assets/images/features/back-roller.jpg', kicker: 'טכנולוגיה', title: '4D Precision PRO + SL', sub: '12 תוכניות · לישה · הקשה' },
+        { src: 'assets/images/features/heating.jpg', kicker: 'חימום', title: 'חימום מובנה', sub: 'הפעלה מממשק השליטה' },
+        { src: 'assets/images/features/leg-foot-massage.webp', kicker: 'רגליים', title: 'גלילי כף רגל', sub: 'לישה לשוקיים · מנוחה נשלפת' },
+        { src: 'assets/images/features/leg-airbag.jpg', kicker: 'עיסוי עוטף', title: 'מערכת Airbags', sub: 'בחירת אזורים · 3 דרגות' },
+        { src: 'assets/images/features/zero-gravity-lifestyle.webp', kicker: 'נוחות', title: 'Zero Gravity', sub: '3 מצבים · Wall Saver כ־5 ס״מ' },
+        { src: 'assets/images/chair-brown-screen.jpg', kicker: 'שליטה', title: 'מסך מגע LCD', sub: 'שליטה קולית AI · 12 תוכניות' },
+        { src: 'assets/images/features/speaker-detail.jpg', kicker: 'שמע', title: 'Bluetooth', sub: 'שמע מובנה · Breathing Light' },
+        { src: 'assets/images/features/controls-tablet-knob.webp', kicker: 'Health', title: 'HR / SpO2', sub: 'אינדיקציה בממשק — לא מכשיר רפואי' },
+        { src: 'assets/images/chair-brown-side.jpg', kicker: 'מפרט', title: '148 × 87 × 108 ס״מ', sub: '150W · 110–240V · 74 / 84 ק״ג' },
+        { src: 'assets/images/chair-brown-3q.jpg', kicker: 'חומרים', title: 'PU + ABS + פלדה', sub: 'אריזה 121 × 76 × 110 ס״מ' },
+        { src: 'assets/images/features/wireless-charging.jpg', kicker: 'נוחות', title: 'טעינה אלחוטית', sub: 'במשענת היד' }
     ];
     var HOLD = 2800;
     var fadeTimer = null;
