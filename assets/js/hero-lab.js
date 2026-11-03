@@ -401,7 +401,7 @@
                 }
             });
         }, { threshold: 0.6 });
-        document.querySelectorAll('.s2-stat-num:not(.stock-sold-count):not(.stock-total-count):not(.stock-left-count), .s4-avg').forEach(function (el) {
+        document.querySelectorAll('.s2-stat-num:not(.stock-sold-count):not(.stock-total-count):not(.stock-left-count):not(.container-number), .s4-avg').forEach(function (el) {
             numObs.observe(el);
         });
     }
@@ -418,14 +418,10 @@
             countdownInterval = null;
         }
 
-        var end;
-        if (endDate) {
-            end = new Date(endDate).getTime();
-        } else {
-            var d = new Date();
-            d.setDate(d.getDate() + 45);
-            d.setHours(23, 59, 59, 0);
-            end = d.getTime();
+        var end = endDate && endDate !== 'auto' ? new Date(endDate).getTime() : NaN;
+        if (isNaN(end) || end < Date.now()) {
+            var now = new Date();
+            end = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59).getTime();
         }
 
         function tick() {
