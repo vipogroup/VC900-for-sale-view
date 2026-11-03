@@ -573,6 +573,7 @@ main .vp-orb {
 .s2-timer {
     flex-wrap: wrap;
     row-gap: 8px;
+    direction: ltr;
 }
 
 .s2-t span {
