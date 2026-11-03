@@ -7,7 +7,7 @@
         { src: 'assets/images/features/heating.jpg', kicker: 'חימום', title: 'חימום מובנה', sub: 'הפעלה מממשק השליטה' },
         { src: 'assets/images/features/leg-foot-massage.webp', kicker: 'רגליים', title: 'גלילי כף רגל', sub: 'לישה לשוקיים · מנוחה נשלפת' },
         { src: 'assets/images/features/leg-airbag.jpg', kicker: 'עיסוי עוטף', title: 'מערכת Airbags', sub: 'בחירת אזורים · 3 דרגות' },
-        { src: 'assets/images/features/zero-gravity-lifestyle.webp', kicker: 'נוחות', title: 'Zero Gravity', sub: '3 מצבים · Wall Saver כ־5 ס״מ' },
+        { src: 'assets/images/chair-brown-recline.jpg', kicker: 'נוחות', title: 'Zero Gravity', sub: '3 מצבים · Wall Saver כ־5 ס״מ' },
         { src: 'assets/images/chair-brown-screen.jpg', kicker: 'שליטה', title: 'מסך מגע LCD', sub: 'שליטה קולית AI · 12 תוכניות' },
         { src: 'assets/images/features/speaker-detail.jpg', kicker: 'שמע', title: 'Bluetooth', sub: 'שמע מובנה · Breathing Light' },
         { src: 'assets/images/features/controls-tablet-knob.webp', kicker: 'Health', title: 'HR / SpO2', sub: 'אינדיקציה בממשק — לא מכשיר רפואי' },
